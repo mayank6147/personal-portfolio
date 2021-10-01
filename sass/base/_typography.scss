@@ -1,0 +1,16 @@
+
+body{
+    font-family: $font-display;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.heading--1{
+    color: $color-secondary;
+    text-shadow: 0 1rem .2rem rgba($color-black, 0.2);
+    transition: all .2s ease-out;
+}
+.heading--1:hover{
+        color: $color-secondary-dark;
+}
+
