@@ -1,21 +1,19 @@
 .project{
-     grid-column: 3/13;
-     background-color:$color-white;
+     
+     background-color:$color-black;
      box-shadow:0 1.2rem 2rem rgba($color-black, 0.2);
      padding-top:3rem;
 
      padding-bottom: 3rem;
-      @media only screen and (max-width:600px) {
+      @media only screen and (max-width:$bp-4) {
          grid-column: 2/14;
       }
      
      &__heading{
-         display: flex;
+         display: flex; 
          justify-content: center;
         // margin-bottom: 2rem;
-         font-size: 4rem; 
-         font-weight: 400;
-         text-shadow: none;
+       
      }
    
      &__link:link,&__link:visited{
@@ -36,13 +34,17 @@
      &__container{
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-         grid-gap:4rem;
+         grid-gap:7rem;
          //align-items: center;
          justify-items: center;
-         padding: 2rem 4rem;
-           @media only screen and (max-width:500px) {
-              grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+         padding: 7rem;
+           @media only screen and (max-width:$bp-4) {
+              grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
            }
+              @media only screen and (max-width:$bp-6) {
+                 grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+              }
+           
      }
 
      /////Project Wapper
@@ -67,12 +69,14 @@
       box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
       transition: all .2s linear;
 
-       @media only screen and (max-width:500px) {
-           width:60rem;
+
+       @media only screen and (max-width:$bp-4) {
+           width:80vw;
            height: 40rem;
            border-radius: 1rem;
 
        }
+        
 
       &--1{
          background-image: url(../img/cd-1.png);
@@ -82,7 +86,7 @@
       }
       &--3 {
          background-image: url(../img/cd-3.png);
-      }
+      } 
       &--4 {
          background-image: url(../img/cd-4.jpg);
       }
@@ -136,24 +140,11 @@
      &__heading--link:link , &__heading--link:visited{
         
         text-decoration: none;
-        color: $color-black-2;
+        color: $color-white;  
         position: relative;
       
      }
-   /*  &__heading--link::after {
-         content: "";
-         position: absolute;
-         top: 3rem;
-         left: 0;
-         height: 5px;
-         width: 100%;
-         background-image: linear-gradient(to right, rgb(255, 49, 82) 0%, rgb(255, 208, 18) 100%);
-         opacity: 0;
-     }
-     &__heading--link:hover::after {
-          opacity: 1;
-          animation: underline .2s ease-out;
-     }*/
+ 
      &__heading--link{
         padding-bottom:5px;
         background: linear-gradient(to right, $color-primary 0%, $color-tertiary 100%) bottom left no-repeat;
@@ -166,18 +157,4 @@
      }
 
 }  
-/*.gradient-effect{
-    a{
-        padding-bottom: 5px;
-        background: linear-gradient(to right, rgb(255, 49, 82) 0%, rgb(255, 208, 18) 100%);
-        background-size: 0px 4px;
-        background-repeat: no-repeat;
-        background-position: left 87%;
-        &:after, &:before{ display: none; }
-        &:hover{
-            color:#333;
-            background-size: 100% 4px;
-        }
-    }
-}
-*/
+

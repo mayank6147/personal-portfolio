@@ -26,19 +26,24 @@ body{
     display: grid;
     grid-template-columns:[gap-line-1-start] 3rem[gap-line-1-end center-start] repeat(12, [col-start] 1fr [col-end]) [center-end gap-line-2-start] 3rem [gap-line-2-end];
     grid-template-rows: repeat(5, min-content);
-    row-gap: 4rem;
+   // row-gap: 2rem;
     @media only screen and (max-width:600px){
          grid-template-columns:[gap-line-1-start] 2rem[gap-line-1-end center-start] repeat(12, [col-start] 1fr [col-end]) [center-end gap-line-2-start] 2rem [gap-line-2-end];
          grid-template-rows: repeat(5, min-content);
-         row-gap: 2rem;
+      //   row-gap: 2rem;
     }
 
    
-    background-image: url(../img/bg-1.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../img/bg-7.jpg); 
+    background-repeat: no-repeat; 
     background-size: cover;
-    background-position: center center;
+    background-position: center center; 
 
 
-    
+     
+}
+
+::selection{
+    background-color: $color-primary;
+    color: $color-white;
 }

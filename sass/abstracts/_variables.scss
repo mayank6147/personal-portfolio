@@ -20,6 +20,7 @@ $cl-pink:#ffc4ff;
 $cl-blue-dark:#141c3a;
 //font family
 $font-display:"Roboto",sans-serif;
+$font-display-2:"Montserrat",sans-serif;
 
 /// color
 
@@ -46,6 +47,9 @@ $color-black-light-2:#525e65;
 
 //variable for screen
  
-$bp-1:93.75em;  
-$bp-2:62.5em;
-$bp-3:50em;
+$bp-1:93.75em;  //1500px
+$bp-2:62.5em; //1000px
+$bp-3:50em; //800px
+$bp-4:37.5em; //600px
+$bp-5:31.25em;//500px
+$bp-6:18.75em;//300px

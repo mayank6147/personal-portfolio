@@ -13,7 +13,7 @@
 @keyframes fill-70{
     100%{
          stroke-dashoffset: 132;
-    }
+    }   
 }
 @keyframes fill-40 {
     100% {
@@ -39,4 +39,49 @@
     100%{
         width:100%;
     }
+}
+
+.animation-move-up{
+   // transition: animation 1s;
+    animation-name: moveup;
+    animation-delay: 0s;
+    animation-timing-function: cubic-bezier(.34, .92, .97, .03);
+    animation-duration: 3s;
+} 
+@keyframes moveup{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animation-move-x{
+     animation-name: movex;
+     animation-delay: 0s;
+     animation-timing-function: cubic-bezier(.34, .92, .97, .03);
+     animation-duration: 3s;
+}
+@keyframes movex{
+     0% {
+         opacity: 0;
+         transform: translateX(3rem);
+     }
+
+     50% {
+         opacity: 1;
+         transform: translateX(-2rem);
+     }
+
+     100% {
+         opacity: 1;  
+         transform: translateX(0);
+     }
 }

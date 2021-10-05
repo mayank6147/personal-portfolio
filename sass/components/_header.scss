@@ -1,65 +1,39 @@
 .header {
    
-   grid-column: 3/13;
-   grid-row: auto;
-   width: 100%;
- 
+   background-color: $color-black;
+   text-align: center;
+   color:$color-white;
+   display: flex;
+   flex-direction: column;  
+   align-items: center;
+   padding: 7rem;
+   gap:3rem;
    
-   //background-color: rgba(#fff, 0.8);
-   background-color: $color-primary;
-   //border-radius: 2rem;
-   box-shadow: 0 1.2rem 2rem rgba($color-white, 0.2);
-   border-top-left-radius: 1rem;
-   border-top-right-radius: 1rem;
 
-    @media only screen and (max-width:600px) {
+    @media only screen and (max-width:$bp-4) {
        grid-column: 2/14;
        border-top-left-radius: .8rem;
        border-top-right-radius: .8rem;
        box-shadow: 0 1.2rem .5rem rgba($color-white, 0.2);
     }
-     
-
- /*  display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center; */
-   display:grid;
-   grid-template-columns: repeat(6 , minmax(min-content , 1fr));
-   grid-template-rows: repeat(3,minmax(min-content ,auto));
-   align-items: center;
-   justify-items: center;
-
-   &__about {
-    color: $color-white;
-    grid-row: 2/3;
-    grid-column: 2/6;
-   // margin-bottom: 4rem; 
-   }
-
-   &__title {
-     grid-column: 2/6;
-     font-size: 6rem;
-    // margin-bottom: 1rem;
-
-   }
-
-   &__sub {
-      font-size: 2.4rem;
-      color:$color-white;
-      
-   }
-
+    
    &__figure {
-     transform: translateY(-60px); 
-     grid-row: 1/2;
-     grid-column: 1/-1;
      position: relative;
-     @media only screen and (max-width:600px){
-        transform: translateY(-40px);
+     @media only screen and (max-width:$bp-4) {
+        transform: translateY(-.4rem);
      }
 
    }
+    &__figure:hover &__caption {
+       transform: translate(-50%, -50%);
+       opacity: 1;
+    }
+
+    &__figure:hover &__img {
+       transform: scale(1);
+       filter: blur(1px) brightness(50%);
+       transform: scale(1);
+    }
 
    &__img {
      width: 15rem; 
@@ -67,7 +41,26 @@
      transform: scale(1.2);
      transition: all .2s;
    }
-  
+   &__about{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+         align-items: center;
+   }
+   &__title{
+      font-size: 9rem;
+      font-style: italic;
+      font-weight: 900;
+      @media only screen and (max-width:$bp-6) {
+                 font-size:6rem;
+      }
+   }
+   &__sub{
+      width: 60%;
+      text-align: center;
+      overflow: hidden;
+      font-size: 2rem;
+   }
    &__caption{
      
       position: absolute;
@@ -80,75 +73,24 @@
       transition: all .2s;
       font-weight: 400;
    }
-   
-   &__figure:hover &__caption {
-      transform: translate(-50%, -50%);
-      opacity: 1;
+
+   &__contact {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
    }
-   &__figure:hover &__img{
-      transform: scale(1);
-      filter: blur(1px) brightness(50%);
-      transform: scale(1);
+   &__contact--title{
+      letter-spacing: 2px;
+
+   }
+
+   &__social-contact{
+      display: flex;
+      align-items: center;
+      
    }
    
 }
 
-
-/*.header{
- margin-top: 20rem;  
- grid-column: 3/9;
- grid-row: auto;
- width: 100%;
-
- background-color: rgba(#fff, 0.8);
- //border-radius: 2rem;
- box-shadow:0 1.2rem 2rem rgba(#000,0.2);
-
- display: grid;
- overflow: hidden;
- padding:2rem;
- //grid-template-columns: repeat(2, minmax( min-content,1fr));
- grid-template-columns: 1fr 1fr;
- grid-row: 1fr;
- grid-gap: .5fr;
- align-items: center;
- justify-items: center;
-
- &__about{
-    grid-column: 1/2;
-    grid-row: 1/2;
-   
- }
- &__title{
-    font-size: 5rem;
-    letter-spacing: -2px;
-    font-weight: 900;
-    font-style: italic;
-    //font-family:$font-display;
-   font-family: Georgia,sans-serif;
- }
- &__sub{
-    color:$color-grey-dark-2;
-    font-weight: 300;
-    letter-spacing: 2px;
- }
- &__figure{
-     grid-column: 2/3;
-     grid-row: 1/2;
-     box-shadow:0 1.2rem 2rem rgba(#000, 0.2);
-     background-color:rgba(#fff, 0.23);
-     border-radius: 2rem;
-     padding: 3rem;
-     display:flex;
-     justify-content: center;
-     align-items: center;
-
- }
-
- &__img{
-     width:80%;
-     border-radius: 50%;
- }
-}
-
-*/
